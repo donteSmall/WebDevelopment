@@ -16,17 +16,15 @@ func init() {
 
 func main() {
 
-	/*
-	   Here we pass in a string to the template.
+	scoreboard := struct {
+		Score1 int
+		Score2 int
+	}{
+		7,
+		9,
+	}
 
-	   We assign values to variables in our temp.gohtml like :
-	   ASSIGN
-	   {{$wisdom := .}}
-	   USE
-
-	   {{$wisdom}}
-	*/
-	err := temp.ExecuteTemplate(os.Stdout, "temp.gohtml", `Release the dragon, ohhhhh yea!`)
+	err := temp.Execute(os.Stdout, scoreboard)
 	if err != nil {
 		log.Fatalln(err)
 	}

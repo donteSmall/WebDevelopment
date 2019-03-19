@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Comparison Statements</title>
+</head>
+<body>
+
+
+Greater than Ex
+  {{if gt .Score1 .Score2}}
+    Score 1 > Score 2 - {{.}}
+  {{end}}
+
+Less than Ex
+  {{if lt .Score1 .Score2}}
+    Score 1 < Score 2 - {{.}}
+  {{end}}
+Equal
+  {{if eq .Score1 .Score2}}
+    Score 1 = Score 2 - {{.}}
+  {{end}}
+Less than 10
+  {{if lt .Score1 10}}
+    LAST ONE: SCORE 1 < 10
+  {{end}}
+
+
+  <!--
+Conditional Statments!! Extend exploration.
+  -->
+
+  <!-- FYI -->
+  This is a go template comment
+
+
+  </body>
+  </html>

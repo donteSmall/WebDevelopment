@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Piplining Ex: output becomes input func</title>
+</head>
+<body>
+
+Float Double: {{.| flodouble}}
+Float Double, Float Square : {{.|flodouble|flosquare}}
+Float Double, Float Square, Float Root : {{.|flodouble|flosquare|flosquareroot}}
+
+
+</body>
+</html>

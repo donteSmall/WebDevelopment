@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>**AND** EXAMPLE using Range & Conditional Statements</title>
+</head>
+<body>
+  EXAMPLE #1
+  {{range .}}
+    {{.}}
+  {{end}}
+
+
+  {{if .}}
+    EXAMPLE #2 - {{.}}
+  {{end}}
+
+ EXAMPLE #3
+  {{range .}}
+  {{if .}}
+    EXAMPLE #3 - {{.Name}}
+  {{end}}
+  {{end}}
+
+  EXAMPLE #4
+   {{range .}}
+   {{if and .Name .Admin}}
+      EXAMPLE #4 - {{.Motto}}
+      EXAMPLE #4 - {{.Name}}
+      EXAMPLE #4 - {{.Admin}}
+   {{end}}
+   {{end}}
+
+  <!--
+1. Ranges over the datastruct of type struct
+2. Checks to see if there is data,if so show data
+3. Ranges over the datastruct of type struct, check if there is a name
+4. Ranges over the datastruct of type struct, checking for said feilds
+   if Name and Admin are true
+
+  -->
+
+  <!-- FYI -->
+  This is a go template comment
+
+
+  </body>
+  </html>
