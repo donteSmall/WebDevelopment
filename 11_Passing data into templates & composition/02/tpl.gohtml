@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Composition with conditional logic</title>
+</head>
+<body>
+  <h1>{{.Name}}</h1>
+  <h2>{{.Age}}</h2>
+  {{if .LicenseToLove}}
+  <h3>License To Love</h3>
+    {{else}}
+    <h3>License To Forgive</h3>
+      {{end}}
+  </body>
+</html>
