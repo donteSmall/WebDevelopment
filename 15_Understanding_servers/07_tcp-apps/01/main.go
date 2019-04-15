@@ -28,6 +28,7 @@ func main() {
 func handle(conn net.Conn) {
 	scanner := bufio.NewScanner(conn)
 	for scanner.Scan() {
+		//Turn strings into slice of bytes
 		ln := strings.ToLower(scanner.Text())
 		bs := []byte(ln)
 		r := rot13(bs)
@@ -37,6 +38,7 @@ func handle(conn net.Conn) {
 	}
 }
 
+// caesar encryption --> Rotate chararcter then encryption
 func rot13(bs []byte) []byte {
 	var r13 = make([]byte, len(bs))
 	for i, v := range bs {
